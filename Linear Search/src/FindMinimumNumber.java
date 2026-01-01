@@ -6,11 +6,11 @@ public class FindMinimumNumber {
     }
 
     static int minimumNumber(int[] arr){
-        int minimum = arr[0];
             if(arr.length==0){
                 return -1;
             }
 
+        int minimum = arr[0];
         for (int index = 0; index < arr.length; index++) {
             if(arr[index] < minimum){
                 minimum = arr[index];

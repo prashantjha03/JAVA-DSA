@@ -1,13 +1,13 @@
-public class ceiling {
+public class floor {
     public static void main(String[] args) {
-        int[] arr = {2, 3, 5, ceiling};
-        int target = 20;
-        System.out.println(ceiling(arr,target));
+        int[] arr = {2, 3, 5, 9, 14, 16, 18};
+        int target = 1;
+        System.out.println(floor(arr,target));
 
 
     }
 
-    static int ceiling(int[] arr, int target){
+    static int floor(int[] arr, int target){
         int start =0;
         int end = arr.length -1;
 
@@ -25,6 +25,6 @@ public class ceiling {
 
 
         }
-        return start;
+        return end;
     }
 }

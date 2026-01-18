@@ -1,13 +1,13 @@
-public class BinarySearch {
+public class ceiling {
     public static void main(String[] args) {
-        int[] arr = {-15, -10, -5, -2, -1, 10, 20, 40, 70, 90, 150, 250, 365};
-        int target = 20;
-        System.out.println(binarySearch(arr,target));
+        int[] arr = {2, 3, 5, 9, 14, 16, 18};
+        int target = 19;
+        System.out.println(ceiling(arr,target));
 
 
     }
 
-    static int binarySearch(int[] arr, int target){
+    static int ceiling(int[] arr, int target){
         int start =0;
         int end = arr.length -1;
 
@@ -25,6 +25,6 @@ public class BinarySearch {
 
 
         }
-        return -1;
+        return start;
     }
 }

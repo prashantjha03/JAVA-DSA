@@ -1,30 +1,27 @@
-public class ceiling {
+public class smallestLetter {
     public static void main(String[] args) {
-        int[] arr = {2, 3, 5, 9, 14, 16, 18};
-        int target = 19;
-        System.out.println(ceiling(arr,target));
 
-
+//leet code
+//https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/
     }
 
-    static int ceiling(int[] arr, int target){
+    static int smallestLetters(int[] letters, int target){
+
         int start =0;
-        int end = arr.length -1;
+        int end = letters.length -1;
 
         while(start<=end){
 //            if we use int mid = (start+end)/2, it might be possible that  start+end may exceed the integer value in java
             int mid = start + (end - start)/2;
 
-            if(target < arr[mid]){
+            if(target < letters[mid]){
                 end = mid-1;
-            } else if (target > arr[mid]) {
+            } else  {
                 start = mid+1;
-            } else{
-                return mid;
             }
 
 
         }
-        return start;
+        return letters[start % letters.length] ;
     }
 }
